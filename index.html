@@ -2,34 +2,43 @@
   <head>
     <title>CS4241 In Class</title>
     <meta charset="utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
   <body>
   	<h1>Location API</h1>
 
   	<h2>Overview</h2>
-  	<p>This amazing location API allows access to a dataset of locations (CSV format) with the following informaiton included. Response return IDs which can be matched to the location and other information about that specific row of data.</p>
+  	<p>This amazing location API allows access to a dataset of locations (JSON format) with the following information included. The response returns IDs which can be matched to the location and additional information about that location.</p>
 
-  	<h3>Dataset Information</h3>
-  		<h5>Data features:</h5>
-  		<ul>
-  			<li>ID</li>
-  			<li>Location name</li>
-  			<li>State abbreviation</li>
-  			<li>Elevation</li>
-  			<li>Type of location</li>
-  		</ul>
-  		<h5>Example data:</h5>
-  		<ul>
-  			<li>ID: 205707</li>
-  			<li>Location name: Breakneck Pond</li>
-  			<li>State abbreviation: CT</li>
-  			<li>Elevation: 696</li>
-  			<li>Type of location: Lake</li>
-  		</ul>
-  	<h3>Example use:</h3>
-  		<p></p>
+  	<h2>Dataset Information Included</h2>
+  		<div >
+	  		<h3>Data features:</h3>
+	  		<ul>
+	  			<li>ID</li>
+	  			<li>Location name</li>
+	  			<li>State abbreviation</li>
+	  			<li>Elevation</li>
+	  		</ul>
+	  	</div>
+	  	<div >
+	  		<h3>Example data:</h3>
+	  		<ul>
+	  			<li>ID: 205707</li>
+	  			<li>Location name: Breakneck Pond</li>
+	  			<li>State abbreviation: CT</li>
+	  			<li>Elevation: 696</li>
+	  		</ul>
+	  	</div>
+	<div>
+  	<h2>Example use:</h2>
+  		<p>This is how you search for a location based on state</p>
+  		<code style="background-color:#D3D3D3;">/search?STATE_ALPHA=MA</code>
 
+  		<p>This is how you search for a range of elevations</p>
+  		<code style="background-color:#D3D3D3;">/?elevation=</code>
+	</div>
   </body>
   
 </html>
