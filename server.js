@@ -44,6 +44,11 @@ function handleSearch(req, res) {
     }
     return true
   })
+  res.header({
+    'Content-type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'X-Requested-With'
+  })
   res.send(filteredLocations)
 }
 
