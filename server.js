@@ -13,6 +13,7 @@ app.get('/', function(req, res) {
 app.get('/index.html', function(req, res) {
   sendFile(res, 'index.html', 'text/html');
 })
+
 app.get('/style.css', function(req, res) {
   sendFile(res, 'style.css', 'text/css');
 })
@@ -25,6 +26,10 @@ app.get('/search', handleSearch)
 app.listen(port);
 console.log('listening on ' + port)
 
+
+function getData() {
+
+}
 
 function handleSearch(req, res) {
   let query = req.query
