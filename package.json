@@ -1,0 +1,14 @@
+{
+  "name": "cs4241-a3-cmtapply",
+  "version": "0.0.1",
+  "description": "WPI CS 4241 Assignment 4",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "pg": "^7.3.0"
+  }
+}
