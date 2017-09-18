@@ -9,7 +9,7 @@ var http = require('http')
   
 
 
-var allMovies = JSON.parse(fs.readFileSync('movies.json'))
+var locationData = JSON.parse(fs.readFileSync('location-data.json'))
   
 
 app.get('/', function(req, res) {
@@ -33,15 +33,15 @@ console.log('listening on ' + port)
 
 
 function getData() {
-  var file = new File(txtFile);
-  file.open("r"); // open file with read access
-  var out = [];
-  while (!file.eof) {
-    // read each line of text
-    out.push(file.readln().split(','));
-  }
-  file.close();
-  return JSON.stringify(out);
+  // var file = new File(txtFile);
+  // file.open("r"); // open file with read access
+  // var out = [];
+  // while (!file.eof) {
+  //   // read each line of text
+  //   out.push(file.readln().split(','));
+  // }
+  // file.close();
+  // return JSON.stringify(out);
 }
 data = getData();
 
