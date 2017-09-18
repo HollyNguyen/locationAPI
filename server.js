@@ -9,7 +9,7 @@ var http = require('http')
   
 
 
-var allMovies = JSON.parse(fs.readFileSync('movies.json'))
+var locationData = JSON.parse(fs.readFileSync('location-data.json'))
   
 
 app.get('/', function(req, res) {
