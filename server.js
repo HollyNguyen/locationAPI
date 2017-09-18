@@ -5,11 +5,21 @@ var http = require('http')
   , express = require('express')
   , app = express()
   , port = 8080
+  , FILENAME = "/location-data.csv"
   
 
 function getData() {
-
+  var file = new File(txtFile);
+  file.open("r"); // open file with read access
+  var out = [];
+  while (!file.eof) {
+    // read each line of text
+    out.push(file.readln().split(','));
+  }
+  file.close();
+  return JSON.stringify(out);
 }
+data = getData();
 
 var allMovies = JSON.parse(fs.readFileSync('movies.json'))
 
