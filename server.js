@@ -36,7 +36,7 @@ function handleSearch(req, res) {
     for (let attr in query) {
       switch (attr) {
         case 'STATE_ALPHA':
-          if (query[attr] !== data[attr]) {
+          if (query[attr] !== locationData[attr]) {
             return false
           }
         break
