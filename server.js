@@ -32,7 +32,7 @@ console.log('listening on ' + port)
 
 function handleSearch(req, res) {
   let query = req.query
-  let filteredLocations = allLocations.filter(function(location) {
+  let filteredLocations = locationData.filter(function(location) {
     for (let attr in query) {
       switch (attr) {
         case 'STATE_ALPHA':
