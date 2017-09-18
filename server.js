@@ -33,14 +33,19 @@ function getData() {
 
 function handleSearch(req, res) {
   let query = req.query
-  for (let attr in query) {
-    switch (attr) {
-      case 'someSearchQuery':
-        // Do something
-      break
+  let filteredLocations = allLocations.filter(function(location) {
+    for (let attr in query) {
+      switch (attr) {
+        case 'STATE_ALPHA':
+          if (query[attr] !== data[attr]) {
+            return false
+          }
+        break
+      }
     }
-  }
-  res.send(/* SOME DATA */)
+    return true
+  })
+  res.send(filteredLocations)
 }
 
 
