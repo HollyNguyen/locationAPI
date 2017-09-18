@@ -7,6 +7,10 @@ var http = require('http')
   , port = 8080
   
 
+function getData() {
+
+}
+
 var allMovies = JSON.parse(fs.readFileSync('movies.json'))
 
 app.get('/', handleSearch)
