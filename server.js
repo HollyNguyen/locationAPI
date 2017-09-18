@@ -4,7 +4,12 @@ var http = require('http')
   , url  = require('url')
   , express = require('express')
   , app = express()
-  , port = 8088
+  , port = 8080
+  , FILENAME = "/location-data.csv"
+  
+
+
+var allMovies = JSON.parse(fs.readFileSync('movies.json'))
   
 
 app.get('/', function(req, res) {
@@ -13,7 +18,6 @@ app.get('/', function(req, res) {
 app.get('/index.html', function(req, res) {
   sendFile(res, 'index.html', 'text/html');
 })
-
 app.get('/style.css', function(req, res) {
   sendFile(res, 'style.css', 'text/css');
 })
@@ -27,9 +31,19 @@ app.listen(port);
 console.log('listening on ' + port)
 
 
-function getData() {
 
+function getData() {
+  var file = new File(txtFile);
+  file.open("r"); // open file with read access
+  var out = [];
+  while (!file.eof) {
+    // read each line of text
+    out.push(file.readln().split(','));
+  }
+  file.close();
+  return JSON.stringify(out);
 }
+data = getData();
 
 function handleSearch(req, res) {
   let query = req.query
